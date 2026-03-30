@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escala de Manutenção - AP</title>
+    <style>
+        :root {
+            --bg: #121212;
+            --card-bg: #1e1e1e;
+            --text: #e0e0e0;
+            --accent: #009dff;
+            --blue: #03dac6;
+            --orange: #ffb74d;
+            --border: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 { color: var(--accent); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
+        h3 { color: var(--accent); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .daily-box {
+            background: #2c2c2c;
+            border-left: 5px solid var(--blue);
+            padding: 15px;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .weekly-box {
+            background: #2c2c2c;
+            border-right: 5px solid var(--orange);
+            padding: 25px;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 12px 6px rgba(0,0,0,0.3);
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .card.banheiro h2 { color: #4fc3f7; }
+        .card.cozinha h2 { color: #81c784; }
+        .card.po h2 { color: #ba68c8; }
+
+        ul { list-style: none; padding: 10px; }
+        li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #333;
+            padding: 2px 8px;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            margin-top:0px;
+            margin-bottom: 1px;
+            text-transform: uppercase;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #777;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🏠 Manutenção da limpeza do apê</h1>
+
+    <div class="daily-box">
+        <strong>⚡ ROTINA DIÁRIA (todos fazem):</strong><br>
+        • Lixo: encheu? desceu! Evitar acumular lixos fora da lixeira (incluindo embalagens)<br>
+        • Panos de prato: viu que tá sujo? Põe no molho com água sanitária.<br>
+        • Louça: sujou? lavou! Viu que o escorredor tá cheio? Guarda.<br>
+        • Comida: checar fruteira e geladeira e descartar estragados/vencidos<br>
+    </div>
+    
+    <h2>Divisão de tarefas semanais</h2>
+
+    <div class="grid">
+        <div class="card banheiro">
+            <h2>🧼 Banheiro</h2>
+            <ul>
+                <li>Lavar privada (por dentro e por fora), pia e chão </li>
+                <li>Limpar espelho, janela e armário (por fora)</li>
+                <li>Organizar bagunças</li>
+                <li>Trocar pastilha da privada</li>
+                <li>Trocar toalha de rosto e tapete</li>
+            </ul>
+        </div>
+
+        <div class="card cozinha">
+            <h2>🍳 Cozinha + Lavanderia</h2>
+            <ul>
+                <li>Limpar fogão, sanduicheira e micro-ondas</li>
+                <li>Limpar com desengordurante bancada e prateleira</li>
+                <li>Lavar lixeira, fruteira, escorredor e tanque</li>
+                <li>Trocar panos (lavar os que estão de molho)</li>
+            </ul>
+        </div>
+
+        <div class="card po">
+            <h2>🌪️ Pó: chão e superfícies</h2>
+            <ul>
+                <li>Aspirar e/ou varrer chão das áreas comuns</li>
+                <li>Passar pano no chão de todo o apê</li>
+                <li>Tirar pó de superfícies e móveis</li>
+                <li>Passar óleo de peroba na mesa de jantar</li>
+                <li>Colocar tapete limpo na entrada</li>
+            </ul>
+        </div>
+    </div>
+    <p></p>
+    <div class="weekly-box">
+        <strong>⚡ LEMBRETES GERAIS:</strong><br>
+        <ul>
+        <li>Limpar a pia e janela do banheiro sempre após fazer a barba;</li>
+        <li>Se encontrar pano de prato, de chão ou qualquer item de uso geral seco no varal ou lavado na máquina, estender/guardar;</li>
+        <li>Evitar acumular várias toalhas secando no varal (afinal, somos apenas 3), assim como evitar roupas eternas na lavanderia.</li>
+        <li>Se cozinhar e derramar no fogão, escorrer pelo armário ou chão, limpar e secar;</li>
+        <li>Antes da faxina (geralmente última terça do mês), deixar quartos e casa organizados, superfícies livres. Se quiser que ela troque roupa de cama, deixe a limpa já separada e visível.</li>
+        </ul> 
+    </div>
+
+    <footer>
+        Regra: Rodízio de blocos toda segunda-feira. <br>
+        Manter a casa limpa = menos trabalho na faxina mensal!
+    </footer>
+
+</body>
+</html>
